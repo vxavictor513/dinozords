@@ -56,11 +56,11 @@ jobs:
         gcloud auth configure-docker
         
     - name: Unit test
-      run: mvn test
+      run: mvn -B test
     
     - name: SonarCloud Scan
       run: |
-        ./mvnw -B verify sonar:sonar
+        mvn -B verify sonar:sonar
         -Dsonar.projectKey=dinozords -Dsonar.organization=vxavictor513
         -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=$SONAR_TOKEN
       
