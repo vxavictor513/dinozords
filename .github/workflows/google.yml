@@ -60,12 +60,9 @@ jobs:
     
     - name: SonarCloud Scan
       run: mvn -B verify sonar:sonar -Dsonar.projectKey=dinozords -Dsonar.organization=vxavictor513 -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=$SONAR_TOKEN
-      
-#     - name: SonarCloud Scan
-#       uses: SonarSource/sonarcloud-github-action@v1.2
-#       env:
-#         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-#         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
       
     # Build the Docker image
     - name: Build
