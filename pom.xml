@@ -76,8 +76,9 @@
 				<artifactId>jib-maven-plugin</artifactId>
 				<version>2.3.0</version>
 				<configuration>
-					<allowInsecureRegistries>true</allowInsecureRegistries>
-<!--					<sendCredentialsOverHttp>true</sendCredentialsOverHttp>-->
+					<to>
+						<image>asia.gcr.io/acn-ies-gcp/dinozords:${version}</image>
+					</to>
 				</configuration>
 			</plugin>
 			<plugin>

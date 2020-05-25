@@ -5,13 +5,13 @@
 replicaCount: 1
 
 image:
-  repository: 34.87.54.235:80/library/dinozords
+  repository: asia.gcr.io/acn-ies-gcp/dinozords
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
-  tag: latest
+  tag: 0.0.1-SNAPSHOT
 
-imagePullSecrets:
-  - name: regcred
+imagePullSecrets: []
+#  - name: regcred
 nameOverride: ""
 fullnameOverride: ""
 
