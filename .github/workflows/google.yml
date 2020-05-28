@@ -27,6 +27,8 @@ env:
   IMAGE: dinozords
   REGISTRY_HOSTNAME: asia.gcr.io
 #   DEPLOYMENT_NAME: gke-test
+  HELM_USERNAME: ${{ secrets.HELM_USERNAME }}
+  HELM_PASSWORD: ${{ secrets.HELM_PASSWORD }}
 
 jobs:
   setup-build-publish-deploy:
