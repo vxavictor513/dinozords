@@ -81,7 +81,7 @@ jobs:
     # Set up Helm
     - name: Set up Helm
       run: |
-        helm repo add --username=$HELM_USERNAME --password=#HELM_PASSWORD library http://34.87.54.235:80/chartrepo/library
+        helm repo add --username=$HELM_USERNAME --password=$HELM_PASSWORD library http://34.87.54.235:80/chartrepo/library
 
 #     # Set up kustomize
 #     - name: Set up Kustomize
